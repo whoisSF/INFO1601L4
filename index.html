@@ -1,17 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    p::after {
+      content: " - Remember this";
+    }
+    * {
+      box-sizing: border-box;
+    }
 
-</style>
-<body>
+    header,
+    footer,
+    section,
+    aside,
+    main {
+      padding: 1em;
+    }
 
+    header,
+    footer {
+      color: white;
+      background-color: #1976d2;
+      flex-grow: 1;
+    }
 
+    aside {
+      display: flex;
+      justify-content: center;
+      color: #212121;
+      background-color: #bbdefb;
+      flex-grow: 3;
+    }
+    section {
+      background-color: #ff4081;
+      color: white;
+      flex-grow: 1;
+      margin: 0.5em;
+    }
 
-	
-</body>
+    main {
+      background-color: #2196f3;
+      color: white;
+      flex-grow: 7;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    div.row {
+      flex-grow: 8;
+    }
+
+    @media screen and (max-width: 600px) {
+      div.row {
+        flex-direction: column;
+      }
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <body>
+    <p>My Name is Duck</p>
+    <p>i Live in Ducksburg</p>
+
+    <p>
+      <b>Note: </b> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      Dolorum dolor dolore praesentium amet vitae eaque quod ullam, quidem
+      tenetur perferendis quae. Autem accusamus, vel eius odio recusandae culpa
+      vitae consequatur.
+    </p>
+
+    <header>Header</header>
+    <aside>
+      Aside
+      <section>Section 1</section>
+      <section>Section 2</section>
+    </aside>
+    <main>Main</main>
+    <footer>Footer</footer>
+
+    <header>Header</header>
+    <div class="row">
+      <aside class="col">
+        Aside
+        <section>Section 1</section>
+        <section>Section 2</section>
+      </aside>
+      <main>Main</main>
+    </div>
+  </body>
 </html>
